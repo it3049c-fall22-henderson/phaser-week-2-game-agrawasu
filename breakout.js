@@ -1,4 +1,4 @@
-﻿let player, ball, violetBricks, yellowBricks, redBricks;
+﻿let player, ball, violetBricks, yellowBricks, redBricks, cursors;
 
 const config = {
     type: Phaser.AUTO,
@@ -65,7 +65,13 @@ function create() {
 
 }
 function update() {
+    if (isGameOver(this.physics.world)) {
 
+    } else if (isWon()) {
+
+    } else {
+
+    }
 }
 
 function isGameOver(world) {
