@@ -84,6 +84,19 @@ function create() {
     this.physics.add.collider(ball, player, hitPlayer, null, this);
 
     player.setImmovable(true);
+
+    openingText = this.add.text(
+        this.physics.world.bounds.width / 2,
+        this.physics.world.bounds.height / 2,
+        'Press SPACE to Start',
+        {
+            fontFamily: 'Monaco, Courier, monospace',
+            fontSize: '50px',
+            fill: '#fff'
+        },
+      );
+      
+      openingText.setOrigin(0.5);
 }
 function update() {
     if (isGameOver(this.physics.world)) {
