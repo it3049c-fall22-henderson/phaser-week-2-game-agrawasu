@@ -1,4 +1,5 @@
 ﻿let player, ball, violetBricks, yellowBricks, redBricks, cursors;
+let openingText, gameOverText, playerWonText;
 let gameStarted = false;
 
 const config = {
