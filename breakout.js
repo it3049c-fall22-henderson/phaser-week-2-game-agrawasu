@@ -32,7 +32,8 @@ function preload() {
   this.load.image('brick3', 'assets/images/brick3.png');
 }
 function create() {
-
+    player = this.physics.add.sprite(400,600,'paddle');
+    ball = this.physics.add.sprite(400,565,'ball');
 }
 function update() {
 
