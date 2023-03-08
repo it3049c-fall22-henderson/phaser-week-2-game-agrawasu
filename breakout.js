@@ -109,6 +109,16 @@ function update() {
     }
 }
 
+function hitPlayer(ball, player) {
+    ball.setVelocityY(ball.body.velocity.y - 5);
+  
+    let newXVelocity = Math.abs(ball.body.velocity.x) + 5;
+    if (ball.x < player.x) {
+        ball.setVelocityX(-newXVelocity);
+    } else {
+        ball.setVelocityX(newXVelocity);
+    }
+}
 function hitBrick(ball, brick) {
     brick.disableBody(true, true);
   
