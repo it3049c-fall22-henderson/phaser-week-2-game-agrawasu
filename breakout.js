@@ -63,6 +63,7 @@ function create() {
         }
     });
 
+    cursors = this.input.keyboard.createCursorKeys();
 }
 function update() {
     if (isGameOver(this.physics.world)) {
@@ -70,7 +71,13 @@ function update() {
     } else if (isWon()) {
 
     } else {
+        player.body.setVelocityX(0);
 
+        if (cursors.left.isDown) {
+            player.body.setVelocityX(-350);
+        } else if (cursors.right.isDown) {
+            player.body.setVelocityX(350);
+        }
     }
 }
 
