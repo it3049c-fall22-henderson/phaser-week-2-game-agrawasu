@@ -68,6 +68,10 @@ function create() {
 
     player.setCollideWorldBounds(true);
     ball.setCollideWorldBounds(true);
+
+    ball.setBounce(1, 1);
+
+    this.physics.world.checkCollision.down = false;
 }
 function update() {
     if (isGameOver(this.physics.world)) {
