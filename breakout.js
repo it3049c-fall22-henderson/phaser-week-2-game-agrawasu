@@ -114,10 +114,10 @@ function update() {
 
         if (!gameStarted) {
             ball.setX(player.x);
-          
             if (cursors.space.isDown) {
                 gameStarted = true;
                 ball.setVelocityY(-200);
+                openingText.setVisible(false);
             }
         }
     }
