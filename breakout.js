@@ -97,6 +97,33 @@ function create() {
       );
       
       openingText.setOrigin(0.5);
+      gameOverText = this.add.text(
+        this.physics.world.bounds.width / 2,
+        this.physics.world.bounds.height / 2,
+        'Game Over',
+        {
+          fontFamily: 'Monaco, Courier, monospace',
+          fontSize: '50px',
+          fill: '#fff'
+        },
+      );
+      
+      gameOverText.setOrigin(0.5);
+      gameOverText.setVisible(false);
+      
+      playerWonText = this.add.text(
+        this.physics.world.bounds.width / 2,
+        this.physics.world.bounds.height / 2,
+        'You won!',
+        {
+          fontFamily: 'Monaco, Courier, monospace',
+          fontSize: '50px',
+          fill: '#fff'
+        },
+      );
+      
+      playerWonText.setOrigin(0.5);
+      playerWonText.setVisible(false);
 }
 function update() {
     if (isGameOver(this.physics.world)) {
