@@ -71,3 +71,6 @@ function update() {
 function isGameOver(world) {
     return ball.body.y > world.bounds.height;
 }
+function isWon() {
+    return redBricks.countActive() + greenBricks.countActive() + blueBricks.countActive() == 0;
+}
