@@ -65,6 +65,9 @@ function create() {
     });
 
     cursors = this.input.keyboard.createCursorKeys();
+
+    player.setCollideWorldBounds(true);
+    ball.setCollideWorldBounds(true);
 }
 function update() {
     if (isGameOver(this.physics.world)) {
