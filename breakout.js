@@ -127,7 +127,8 @@ function create() {
 }
 function update() {
     if (isGameOver(this.physics.world)) {
-
+        gameOverText.setVisible(true);
+        ball.disableBody(true, true);
     } else if (isWon()) {
         playerWonText.setVisible(true);
         ball.disableBody(true, true);
