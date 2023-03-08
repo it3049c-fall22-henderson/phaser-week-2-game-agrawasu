@@ -102,6 +102,19 @@ function update() {
     }
 }
 
+function hitBrick(ball, brick) {
+    brick.disableBody(true, true);
+  
+    if (ball.body.velocity.x == 0) {
+        randNum = Math.random();
+        if (randNum >= 0.5) {
+            ball.body.setVelocityX(150);
+        } else {
+            ball.body.setVelocityX(-150);
+        }
+    }
+}
+
 function isGameOver(world) {
     return ball.body.y > world.bounds.height;
 }
