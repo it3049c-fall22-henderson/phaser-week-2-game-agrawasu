@@ -38,6 +38,7 @@ function create() {
 
     redBricks = this.physics.add.group({
         key: 'brick1',
+        immovable: true,
         repeat: 9,
         setXY: {
             x: 80,
@@ -47,6 +48,7 @@ function create() {
     });
     greenBricks = this.physics.add.group({
         key: 'brick2',
+        immovable: true,
         repeat: 9,
         setXY: {
             x: 80,
@@ -56,6 +58,7 @@ function create() {
     });
     blueBricks = this.physics.add.group({
         key: 'brick3',
+        immovable: true,
         repeat: 9,
         setXY: {
             x: 80,
