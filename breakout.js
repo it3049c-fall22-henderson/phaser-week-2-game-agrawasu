@@ -1,4 +1,5 @@
 ﻿let player, ball, violetBricks, yellowBricks, redBricks, cursors;
+let gameStarted = false;
 
 const config = {
     type: Phaser.AUTO,
@@ -77,6 +78,15 @@ function update() {
             player.body.setVelocityX(-350);
         } else if (cursors.right.isDown) {
             player.body.setVelocityX(350);
+        }
+
+        if (!gameStarted) {
+            ball.setX(player.x);
+          
+            if (cursors.space.isDown) {
+                gameStarted = true;
+                ball.setVelocityY(-200);
+            }
         }
     }
 }
