@@ -72,6 +72,10 @@ function create() {
     ball.setBounce(1, 1);
 
     this.physics.world.checkCollision.down = false;
+
+    this.physics.add.collider(ball, redBricks, hitBrick, null, this);
+    this.physics.add.collider(ball, greenBricks, hitBrick, null, this);
+    this.physics.add.collider(ball, blueBricks, hitBrick, null, this);
 }
 function update() {
     if (isGameOver(this.physics.world)) {
