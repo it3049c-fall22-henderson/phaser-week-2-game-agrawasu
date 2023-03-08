@@ -67,3 +67,7 @@ function create() {
 function update() {
 
 }
+
+function isGameOver(world) {
+    return ball.body.y > world.bounds.height;
+}
