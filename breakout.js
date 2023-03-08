@@ -129,7 +129,8 @@ function update() {
     if (isGameOver(this.physics.world)) {
 
     } else if (isWon()) {
-
+        playerWonText.setVisible(true);
+        ball.disableBody(true, true);
     } else {
         player.body.setVelocityX(0);
 
